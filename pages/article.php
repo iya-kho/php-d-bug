@@ -3,9 +3,10 @@
 		array_key_exists('id', $_GET) ? $_GET['id'] : null
 	);
 
-	if(is_null($article) OR !!!!count($article)){
+	if(is_null($article) || count($article) === 0){
 		header('Location:index.php');
 	}
+
 ?>	
 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
@@ -16,6 +17,6 @@
 		</ul>
 	</div>
 	<div class="image">
-		<img src="<?php echo $art['image'];?>" alt="" />
+		<img src="<?php echo $article['image'];?>" alt="" />
 	</div>
 </section>
